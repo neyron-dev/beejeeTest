@@ -1,0 +1,7 @@
+RewriteEngine on
+
+RewriteRule ^css/(.*)$ public/css/$1 [L]
+RewriteRule ^js/(.*)$ public/js/$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule .* public/index.php
